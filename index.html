@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>bootylicious.im 🍑</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      font-family: 'Nunito', sans-serif;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .header {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ff69b4;
+      text-shadow: 1px 1px 2px #ffb6c1;
+      margin-top: 1rem;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .tree-row {
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      padding: 0.5rem 0;
+      animation: sway 3s infinite ease-in-out;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(1deg); }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* New Wiggle Animation */
+    @keyframes wiggle {
+      0%, 100% { transform: translateX(-50%) rotate(0); }
+      25% { transform: translateX(-50%) rotate(-3deg); }
+      50% { transform: translateX(-50%) rotate(3deg); }
+      75% { transform: translateX(-50%) rotate(-2deg); }
+    }
+
+    .peach-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+      gap: 10px;
+      padding: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      height: calc(100vh - 160px);
+      overflow-y: auto;
+    }
+
+    .peach {
+      position: relative;
+      cursor: pointer;
+      animation: fadeIn 0.5s ease-in-out, bounce 2s infinite ease-in-out 0.5s;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .peach:hover {
+      animation: none;
+      transform: rotate(-10deg) scale(1.2);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .shake-button {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 0.5rem 1.2rem; /* Slightly wider padding */
+      border-radius: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 10;
+      font-family: 'Pacifico', cursive; /* New font! */
+      font-size: 1.2rem; /* A little bigger for script */
+    }
+
+    .shake-button:hover {
+      background-color: #ff85c1;
+    }
+
+    .tree-section {
+      position: relative;
+      width: 100%;
+    }
+    
+    #affirmationBox {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 1rem;
+      background: #ff69b4;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 20;
+      text-align: center;
+      max-width: 90%;
+      box-sizing: border-box;
+      line-height: 1.4;
+    }
+    
+    /* New class to trigger wiggle */
+    .is-wiggling {
+      animation: wiggle 0.4s ease-in-out;
+    }
+    
+    /* --- NEW --- unearth.im Credit Signature */
+    .unearth-credit {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      font-family: 'Pacifico', cursive;
+      font-size: 0.9rem;
+      color: #ffb6c1; /* Light pink from your text-shadow */
+      text-shadow: 1px 1px 2px #fff0f5;
+      z-index: 10;
+      text-align: left;
+    }
+
+    .unearth-credit a {
+      color: #ff69b4; /* Hot pink from header and button */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .unearth-credit a:hover {
+      color: #ff85c1; /* Hover color from your button */
+    }
+    /* --- END NEW --- */
+
+    @media (max-width: 600px) {
+      .header {
+        font-size: 2rem;
+      }
+      #affirmationBox {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        line-height: 1.4;
+      }
+      .unearth-credit {
+        font-size: 0.7rem; /* Make it a bit smaller on mobile */
+      }
+    }
+
+    /* --- Custom Scrollbar for Peach Container --- */
+    .peach-container {
+      scrollbar-width: thin;
+      scrollbar-color: #ff69b4 #fff0f5;
+    }
+    .peach-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    .peach-container::-webkit-scrollbar-track {
+      background: #fff0f5;
+    }
+    .peach-container::-webkit-scrollbar-thumb {
+      background-color: #ff69b4;
+      border-radius: 10px;
+      border: 2px solid #fff0f5;
+    }
+  </style>
+</head>
+<body>
+  <audio id="mmmSound" src="mmm.mp3" preload="auto"></audio>
+
+  <div class="unearth-credit">
+    a digital artifact unearthed &amp; preserved by <a href="https://unearth.im" target="_blank">unearth.im</a>
+  </div>
+  <div class="header">bootylicious.im</div>
+
+  <div class="tree-section">
+    <div class="tree-row" aria-label="A row of swaying peach trees.">🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳</div>
+    <div id="affirmationBox">Bold is beautiful.</div>
+  </div>
+  
+  <button class="shake-button" onclick="shakeOrchard()">shake the orchard! 🍑</button>
+  <div class="peach-container" id="peachContainer"></div>
+
+  <script>
+    const affirmations = [
+      "Thicc thighs, high vibes.", "You’re juicy in all the right ways.","Curves ahead—admire freely.","Peachy and proud!","You glow like ripe fruit.","Sass is your superpower!","Your weird is wonderful.","Bootylicious and brilliant!","You’re divine, darling.","Own your peach!","Bold is beautiful.","You’re a whole mood.","Sweetness with a side of spice.","Radiate unapologetically!","You’re the main character.","Confidence looks good on you.","You’re ripe with potential!","Soft doesn’t mean weak.","You’re a walking affirmation!","Your vibe is magnetic.","You’re the peach emoji IRL!","You’re juicy joy in motion.","You’re the sparkle in the orchard.","You’re built to bloom!","Your curves tell stories.","You’re a masterpiece in motion.","You’re the flavor they crave.","You’re a whole snack!","You’re the peach that broke the mold.","You’re luscious and legendary!","You’re the glow-up incarnate.","You’re the softness that heals.","You’re the sass in the sunrise.","You’re the vibe they write songs about.","You’re the fruit of fierce self-love.","You’re the glitter in the grove.","You’re the affirmation others need.","You’re the peach that powers revolutions!","You’re the sweetness in the storm.","You’re the bold bloom in a beige world.","You’re the curve that bends expectations.","You’re the flavor of freedom!","You’re the softness that slays.","You’re the juicy truth.","You’re the peach that doesn’t play small!","You’re the sass that shifts paradigms.","You’re the glow that guides.","You’re the fruit of your own magic.","You’re the peach that rewrites the rules.","You’re the orchard’s crown jewel!","You slay softly and fiercely.","Your joy is loud and unapologetic!","You’re the vibe they wish they had.","You’re the peach emoji with a PhD!","You’re the sparkle in someone’s spiral.","You’re the reason mirrors smile back.","Your softness is your superpower.","You’re the bloom that breaks the rules.","You radiate juicy joy!","You’re the moon’s favorite curve.","Your aura jiggles with stardust!","You’re aligned, divine, and delicious.","You’re the peach that powers galaxies!","You’re the cosmic giggle in the orchard.","You’re the shimmer between dimensions.","You’re the spell that breaks the silence.","You’re the juicy truth of the universe!"
+    ];
+
+    const peachCount = 500;
+    const container = document.getElementById('peachContainer');
+    const sound = document.getElementById('mmmSound');
+    const affirmationBox = document.getElementById('affirmationBox');
+
+    function createPeach() {
+      const peach = document.createElement('span');
+      peach.textContent = '🍑';
+      peach.className = 'peach';
+
+      const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
+      peach.setAttribute('data-affirmation', randomAffirmation);
+
+      peach.addEventListener('mouseenter', () => {
+        sound.currentTime = 0;
+        sound.play();
+        affirmationBox.textContent = randomAffirmation;
+        affirmationBox.style.opacity = 1;
+      });
+
+      peach.addEventListener('mouseleave', () => {
+        affirmationBox.style.opacity = 0;
+      });
+
+      return peach;
+    }
+
+    function populatePeaches() {
+      container.innerHTML = '';
+      for (let i = 0; i < peachCount; i++) {
+        container.appendChild(createPeach());
+      }
+    }
+
+    function shakeOrchard() {
+      populatePeaches();
+      
+      affirmationBox.classList.add('is-wiggling');
+      affirmationBox.addEventListener('animationend', () => {
+        affirmationBox.classList.remove('is-wiggling');
+      }, { once: true });
+    }
+
+    populatePeaches();
+  </script>
+</body>
+</html>

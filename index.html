@@ -2,8 +2,28 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bootylicious.im 🍑</title>
   
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy. A digital monument by unearth.im.">
+  <meta name="keywords" content="Body Positivity, Self-Love, Affirmations, Confidence, Fun, Joy, Empowerment, Interactive, unearth.im">
+  <meta name="author" content="unearth.im">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bootylicious.im/">
+  <meta property="og:title" content="bootylicious.im | An Orchard of Affirmations 🍑">
+  <meta property="og:description" content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy.">
+  <meta property="og:image" content="https://placehold.co/1200x630/ff69b4/ffffff?text=bootylicious.im&font=pacifico">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://bootylicious.im/">
+  <meta property="twitter:title" content="bootylicious.im | An Orchard of Affirmations 🍑">
+  <meta property="twitter:description" content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy.">
+  <meta property="twitter:image" content="https://placehold.co/1200x630/ff69b4/ffffff?text=bootylicious.im&font=pacifico">
+
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
@@ -200,7 +220,7 @@
   </style>
 </head>
 <body>
-  <audio id="mmmSound" src="mmm.mp3" preload="auto"></audio>
+  <audio id="mmmSound" src="https://cdn.glitch.global/2d8a59be-a1c3-4f1e-8a9c-09b43b953d5a/mmm.mp3?v=1669850554593" preload="auto" crossorigin="anonymous"></audio>
 
   <div class="unearth-credit">
     a digital artifact unearthed &amp; preserved by <a href="https://unearth.im" target="_blank">unearth.im</a>
@@ -224,6 +244,7 @@
     const container = document.getElementById('peachContainer');
     const sound = document.getElementById('mmmSound');
     const affirmationBox = document.getElementById('affirmationBox');
+    let audioUnlocked = false; // Flag to check if user has interacted
 
     function createPeach() {
       const peach = document.createElement('span');
@@ -234,8 +255,11 @@
       peach.setAttribute('data-affirmation', randomAffirmation);
 
       peach.addEventListener('mouseenter', () => {
-        sound.currentTime = 0;
-        sound.play();
+        if (audioUnlocked) {
+          sound.currentTime = 0;
+          // We don't log errors here because it's not critical if one hover sound fails.
+          sound.play().catch(e => {}); 
+        }
         affirmationBox.textContent = randomAffirmation;
         affirmationBox.style.opacity = 1;
       });
@@ -255,6 +279,22 @@
     }
 
     function shakeOrchard() {
+      if (!audioUnlocked) {
+        // The first click on the button is a trusted user interaction.
+        // We use this to "unlock" the audio playback for the browser.
+        // A short, silent play can initialize the audio context.
+        const playPromise = sound.play();
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                sound.pause();
+                sound.currentTime = 0;
+            }).catch(error => {
+                // Autoplay was prevented.
+            });
+        }
+        audioUnlocked = true;
+      }
+      
       populatePeaches();
       
       affirmationBox.classList.add('is-wiggling');
@@ -267,3 +307,4 @@
   </script>
 </body>
 </html>
+

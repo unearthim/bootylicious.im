@@ -1,0 +1,10 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .emoji {
+    font-size: 180px;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  }
+</style>
+<rect width="256" height="256" rx="48" fill="#FFF0F5"/>
+<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" class="emoji" dy="0.05em">🍑</text>
+</svg>

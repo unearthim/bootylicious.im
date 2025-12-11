@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bootylicious.im 🍑</title>
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy. A digital monument by unearth heritage foundry | archive & anvil.">
-  <meta name="keywords" content="Body Positivity, Self-Love, Affirmations, Confidence, Fun, Joy, Empowerment, Interactive, unearth.im">
+  <meta name="description"
+    content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy. A digital monument by unearth heritage foundry | archive & anvil.">
+  <meta name="keywords"
+    content="Body Positivity, Self-Love, Affirmations, Confidence, Fun, Joy, Empowerment, Interactive, unearth.im">
   <meta name="author" content="bootylicious.im (by unearth heritage foundry - archive & anvil - unearth.im)">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -49,7 +52,7 @@
         "@type": "Organization",
         "@id": "https://unearth.im/#organization",
         "name": "Unearth Heritage Foundry",
-"alternateName": ["Unearth Foundry", "Archive & Anvil"],
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
         "url": "https://unearth.im/",
         "logo": {
           "@type": "ImageObject",
@@ -87,23 +90,28 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bootylicious.im/">
   <meta property="og:title" content="bootylicious.im | An Orchard of Affirmations 🍑">
-  <meta property="og:description" content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy.">
-  <meta property="og:image" content="https://bootylicious.im/og-image.png"> <!-- Update this path if you place the image elsewhere -->
+  <meta property="og:description"
+    content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy.">
+  <meta property="og:image" content="https://bootylicious.im/og-image.png">
+  <!-- Update this path if you place the image elsewhere -->
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://bootylicious.im/">
   <meta property="twitter:title" content="bootylicious.im | An Orchard of Affirmations 🍑">
-  <meta property="twitter:description" content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy.">
-  <meta property="twitter:image" content="https://bootylicious.im/og-image.png"> <!-- Update this path if you place the image elsewhere -->
+  <meta property="twitter:description"
+    content="An interactive orchard of affirmations celebrating self-love, confidence, and body positivity. Shake the tree and get a juicy dose of joy.">
+  <meta property="twitter:image" content="https://bootylicious.im/og-image.png">
+  <!-- Update this path if you place the image elsewhere -->
 
   <!-- Favicon -->
   <link rel="icon" href="https://bootylicious.im/favicon.svg" type="image/svg+xml">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -139,21 +147,46 @@
     }
 
     @keyframes sway {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(1deg); }
+
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(1deg);
+      }
     }
-    
+
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     /* New Wiggle Animation */
     @keyframes wiggle {
-      0%, 100% { transform: translateX(-50%) rotate(0); }
-      25% { transform: translateX(-50%) rotate(-3deg); }
-      50% { transform: translateX(-50%) rotate(3deg); }
-      75% { transform: translateX(-50%) rotate(-2deg); }
+
+      0%,
+      100% {
+        transform: translateX(-50%) rotate(0);
+      }
+
+      25% {
+        transform: translateX(-50%) rotate(-3deg);
+      }
+
+      50% {
+        transform: translateX(-50%) rotate(3deg);
+      }
+
+      75% {
+        transform: translateX(-50%) rotate(-2deg);
+      }
     }
 
     .peach-container {
@@ -181,8 +214,15 @@
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     .shake-button {
@@ -192,14 +232,17 @@
       background-color: #ff69b4;
       color: white;
       border: none;
-      padding: 0.5rem 1.2rem; /* Slightly wider padding */
+      padding: 0.5rem 1.2rem;
+      /* Slightly wider padding */
       border-radius: 0.5rem;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
       z-index: 10;
-      font-family: 'Pacifico', cursive; /* New font! */
-      font-size: 1.2rem; /* A little bigger for script */
+      font-family: 'Pacifico', cursive;
+      /* New font! */
+      font-size: 1.2rem;
+      /* A little bigger for script */
     }
 
     .shake-button:hover {
@@ -210,7 +253,7 @@
       position: relative;
       width: 100%;
     }
-    
+
     #affirmationBox {
       position: absolute;
       top: 100%;
@@ -223,7 +266,7 @@
       border-radius: 2rem;
       font-size: 1.5rem;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease;
@@ -233,12 +276,12 @@
       box-sizing: border-box;
       line-height: 1.4;
     }
-    
+
     /* New class to trigger wiggle */
     .is-wiggling {
       animation: wiggle 0.4s ease-in-out;
     }
-    
+
     /* --- NEW --- unearth.im Credit Signature */
     .unearth-credit {
       position: fixed;
@@ -246,34 +289,41 @@
       left: 1rem;
       font-family: 'Pacifico', cursive;
       font-size: 0.9rem;
-      color: #ffb6c1; /* Light pink from your text-shadow */
+      color: #ffb6c1;
+      /* Light pink from your text-shadow */
       text-shadow: 1px 1px 2px #fff0f5;
       z-index: 10;
       text-align: left;
     }
 
     .unearth-credit a {
-      color: #ff69b4; /* Hot pink from header and button */
+      color: #ff69b4;
+      /* Hot pink from header and button */
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .unearth-credit a:hover {
-      color: #ff85c1; /* Hover color from your button */
+      color: #ff85c1;
+      /* Hover color from your button */
     }
+
     /* --- END NEW --- */
 
     @media (max-width: 600px) {
       .header {
         font-size: 2rem;
       }
+
       #affirmationBox {
         font-size: 1rem;
         padding: 0.5rem 1rem;
         line-height: 1.4;
       }
+
       .unearth-credit {
-        font-size: 0.7rem; /* Make it a bit smaller on mobile */
+        font-size: 0.7rem;
+        /* Make it a bit smaller on mobile */
       }
     }
 
@@ -282,12 +332,15 @@
       scrollbar-width: thin;
       scrollbar-color: #ff69b4 #fff0f5;
     }
+
     .peach-container::-webkit-scrollbar {
       width: 8px;
     }
+
     .peach-container::-webkit-scrollbar-track {
       background: #fff0f5;
     }
+
     .peach-container::-webkit-scrollbar-thumb {
       background-color: #ff69b4;
       border-radius: 10px;
@@ -295,13 +348,17 @@
     }
   </style>
 </head>
+
 <body>
-  <audio id="mmmSound" src="https://cdn.glitch.global/2d8a59be-a1c3-4f1e-8a9c-09b43b953d5a/mmm.mp3?v=1669850554593" preload="auto" crossorigin="anonymous"></audio>
+  <audio id="mmmSound" src="https://cdn.glitch.global/2d8a59be-a1c3-4f1e-8a9c-09b43b953d5a/mmm.mp3?v=1669850554593"
+    preload="auto" crossorigin="anonymous"></audio>
 
   <div class="unearth-credit">
     <small>
-      a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind meld</a></b> collaboration:<br>
-      digital monument by <b><a href="https://unearth.im" target="_blank" rel="noopener noreferrer">unearth.im</a></b> | <b><a href="https://archaeobytology.org" target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
+      a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer">liminal mind meld</a></b>
+      collaboration:<br>
+      digital monument by <b><a href="https://unearth.im" target="_blank" rel="noopener noreferrer">unearth.im</a></b> |
+      <b><a href="https://archaeobytology.org" target="_blank" rel="noopener noreferrer">archive & anvil</a></b>
     </small>
   </div>
   <div class="header">bootylicious.im</div>
@@ -310,13 +367,13 @@
     <div class="tree-row" aria-label="A row of swaying peach trees.">🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳</div>
     <div id="affirmationBox">Bold is beautiful.</div>
   </div>
-  
+
   <button class="shake-button" onclick="shakeOrchard()">shake the orchard! 🍑</button>
   <div class="peach-container" id="peachContainer"></div>
 
   <script>
     const affirmations = [
-      "Thicc thighs, high vibes.", "You’re juicy in all the right ways.","Curves ahead—admire freely.","Peachy and proud!","You glow like ripe fruit.","Sass is your superpower!","Your weird is wonderful.","Bootylicious and brilliant!","You’re divine, darling.","Own your peach!","Bold is beautiful.","You’re a whole mood.","Sweetness with a side of spice.","Radiate unapologetically!","You’re the main character.","Confidence looks good on you.","You’re ripe with potential!","Soft doesn’t mean weak.","You’re a walking affirmation!","Your vibe is magnetic.","You’re the peach emoji IRL!","You’re juicy joy in motion.","You’re the sparkle in the orchard.","You’re built to bloom!","Your curves tell stories.","You’re a masterpiece in motion.","You’re the flavor they crave.","You’re a whole snack!","You’re the peach that broke the mold.","You’re luscious and legendary!","You’re the glow-up incarnate.","You’re the softness that heals.","You’re the sass in the sunrise.","You’re the vibe they write songs about.","You’re the fruit of fierce self-love.","You’re the glitter in the grove.","You’re the affirmation others need.","You’re the peach that powers revolutions!","You’re the sweetness in the storm.","You’re the bold bloom in a beige world.","You’re the curve that bends expectations.","You’re the flavor of freedom!","You’re the softness that slays.","You’re the juicy truth.","You’re the peach that doesn’t play small!","You’re the sass that shifts paradigms.","You’re the glow that guides.","You’re the fruit of your own magic.","You’re the peach that rewrites the rules.","You’re the orchard’s crown jewel!","You slay softly and fiercely.","Your joy is loud and unapologetic!","You’re the vibe they wish they had.","You’re the peach emoji with a PhD!","You’re the sparkle in someone’s spiral.","You’re the reason mirrors smile back.","Your softness is your superpower.","You’re the bloom that breaks the rules.","You radiate juicy joy!","You’re the moon’s favorite curve.","Your aura jiggles with stardust!","You’re aligned, divine, and delicious.","You’re the peach that powers galaxies!","You’re the cosmic giggle in the orchard.","You’re the shimmer between dimensions.","You’re the spell that breaks the silence.","You’re the juicy truth of the universe!"
+      "Thicc thighs, high vibes.", "You’re juicy in all the right ways.", "Curves ahead—admire freely.", "Peachy and proud!", "You glow like ripe fruit.", "Sass is your superpower!", "Your weird is wonderful.", "Bootylicious and brilliant!", "You’re divine, darling.", "Own your peach!", "Bold is beautiful.", "You’re a whole mood.", "Sweetness with a side of spice.", "Radiate unapologetically!", "You’re the main character.", "Confidence looks good on you.", "You’re ripe with potential!", "Soft doesn’t mean weak.", "You’re a walking affirmation!", "Your vibe is magnetic.", "You’re the peach emoji IRL!", "You’re juicy joy in motion.", "You’re the sparkle in the orchard.", "You’re built to bloom!", "Your curves tell stories.", "You’re a masterpiece in motion.", "You’re the flavor they crave.", "You’re a whole snack!", "You’re the peach that broke the mold.", "You’re luscious and legendary!", "You’re the glow-up incarnate.", "You’re the softness that heals.", "You’re the sass in the sunrise.", "You’re the vibe they write songs about.", "You’re the fruit of fierce self-love.", "You’re the glitter in the grove.", "You’re the affirmation others need.", "You’re the peach that powers revolutions!", "You’re the sweetness in the storm.", "You’re the bold bloom in a beige world.", "You’re the curve that bends expectations.", "You’re the flavor of freedom!", "You’re the softness that slays.", "You’re the juicy truth.", "You’re the peach that doesn’t play small!", "You’re the sass that shifts paradigms.", "You’re the glow that guides.", "You’re the fruit of your own magic.", "You’re the peach that rewrites the rules.", "You’re the orchard’s crown jewel!", "You slay softly and fiercely.", "Your joy is loud and unapologetic!", "You’re the vibe they wish they had.", "You’re the peach emoji with a PhD!", "You’re the sparkle in someone’s spiral.", "You’re the reason mirrors smile back.", "Your softness is your superpower.", "You’re the bloom that breaks the rules.", "You radiate juicy joy!", "You’re the moon’s favorite curve.", "Your aura jiggles with stardust!", "You’re aligned, divine, and delicious.", "You’re the peach that powers galaxies!", "You’re the cosmic giggle in the orchard.", "You’re the shimmer between dimensions.", "You’re the spell that breaks the silence.", "You’re the juicy truth of the universe!"
     ];
 
     const peachCount = 500;
@@ -337,7 +394,7 @@
         if (audioUnlocked) {
           sound.currentTime = 0;
           // We don't log errors here because it's not critical if one hover sound fails.
-          sound.play().catch(e => {}); 
+          sound.play().catch(e => { });
         }
         affirmationBox.textContent = randomAffirmation;
         affirmationBox.style.opacity = 1;
@@ -364,18 +421,18 @@
         // A short, silent play can initialize the audio context.
         const playPromise = sound.play();
         if (playPromise !== undefined) {
-            playPromise.then(_ => {
-                sound.pause();
-                sound.currentTime = 0;
-            }).catch(error => {
-                // Autoplay was prevented.
-            });
+          playPromise.then(_ => {
+            sound.pause();
+            sound.currentTime = 0;
+          }).catch(error => {
+            // Autoplay was prevented.
+          });
         }
         audioUnlocked = true;
       }
-      
+
       populatePeaches();
-      
+
       affirmationBox.classList.add('is-wiggling');
       affirmationBox.addEventListener('animationend', () => {
         affirmationBox.classList.remove('is-wiggling');
@@ -385,4 +442,5 @@
     populatePeaches();
   </script>
 </body>
+
 </html>

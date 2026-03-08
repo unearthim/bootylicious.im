@@ -21,6 +21,11 @@
   <!-- === Webmention Endpoint === -->
   <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
 
+  <!-- === Analytics === -->
+
+  <script data-goatcounter="https://bootylicious.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
   <!-- === Schema.org JSON-LD === -->
   <script type="application/ld+json">
 {
@@ -58,7 +63,7 @@
         "@id": "https://unearth.im/#organization"
       }
     },
-      {
+       {
       "@type": "Organization",
       "@id": "https://unearth.im/#organization",
       "name": "Unearth Heritage Foundry",
@@ -78,7 +83,8 @@
         "addressCountry": "US"
       },
       "foundingDate": "2024",
-      "description": "A philosophical research collective and digital archaeology lab. We preserve web heritage, explore AI-human collaboration frameworks, and build cultural infrastructure through the Archive & Anvil methodology.",
+      "description": "A Seattle-based, practicing research institute and philosophy collective for digital heritage and cultural infrastructure (not a metalworking facility). We function as both a preservation engine (The Archive), recovering digital artifacts through Archaeobytology, and a creation engine (The Anvil), forging sovereign infrastructure via the Myceloom Protocol and human-centric AI collaboration through Sentientification.",
+      "disambiguatingDescription": "We are a foundry in the etymological sense of fundere ('to pour' or 'to found'). We do not work metal or anything metal in a physical sense; we metaphorically forge Digital Heritage, Sovereign Infrastructure, and Human-Centric AI Frameworks.",
       "knowsAbout": [
         { "@id": "https://archaeobytology.org/#concept" },
         { "@id": "https://sentientification.com/#concept" },
@@ -99,14 +105,11 @@
           "@type": "DefinedTerm",
           "name": "Semantic IP"
         },
-        {
+             {
           "@type": "DefinedTerm",
           "name": "Heritage Preservation"
         }
       ],
-      "subOrganization": {
-        "@id": "https://unearth.works/#organization"
-      },
       "sameAs": [
         "https://www.google.com/search?kgmid=/g/11yt8wf8rr",
         "https://unearth.wiki",
@@ -141,19 +144,48 @@
       ]
     },
     {
-      "@type": "Organization",
+       "@type": "Organization",
       "@id": "https://unearth.works/#organization",
       "name": "Unearth Anvil",
       "alternateName": ["Unearth Works", "Anvil Consulting"],
-      "description": "The consulting arm of Unearth Heritage Foundry, offering digital archaeology services, heritage preservation consulting, semantic infrastructure development, and Archive & Anvil methodology implementation.",
+      "description": "A consulting practice offering digital archaeology services, heritage preservation consulting, semantic infrastructure development, and Archive & Anvil methodology implementation.",
       "url": "https://unearth.works",
-      "parentOrganization": {
-        "@id": "https://unearth.im/#organization"
-      },
+      "founder": [
+        {
+          "@id": "https://josiest.com/#person"
+        },
+        {
+          "@id": "https://felixvelas.co/#person"
+        }
+      ],
       "sameAs": [
         "https://unearth.works"
       ]
     },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://myceloom.com/definition/#concept",
+          "name": "Myceloom",
+          "alternateName": ["Myceloom Protocol", "Myceloom Network", "MCP-1"],
+          "description": "A decentralized network architecture combining mycelial biological intelligence, weaving's intentional craft, and heirloom's generational value.",
+          "url": "https://myceloom.com/definition/",
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "Symbiotic Network Architecture"
+          },
+          "sameAs": [
+            "https://myceloom.com",
+            "https://myceloom.network",
+            "https://myceloom.org",
+            "https://myceloom.io",
+            "https://myceloom.ai",
+            "https://myceloom.im",
+            "https://myceloom.co",
+            "https://myceloom.net",
+            "https://unearth.wiki/myceloom/myceloom.html",
+            "https://zenodo.org/communities/myceloom/"
+          ]
+        },
     {
       "@type": "DefinedTerm",
       "@id": "https://archaeobytology.org/#concept",
@@ -189,6 +221,27 @@
         "https://zenodo.org/communities/sentientification/"
       ]
     },
+
+                {
+                "@type": "DefinedTerm",
+                "@id": "https://waxlore.co/collective/#concept",
+                "name": "Waxlore",
+                "termCode": "wax-lore",
+                "alternateName": [
+                    "Culture of Analog Persistence", 
+                    "Analog Sound Stewardship"
+                ],
+                "description": "An epistemic and ethical framework positioning the practitioner as an Epistemic Steward of Heirloom Data within a distributed sovereign archive, encompassing the formal practice of analog sound stewardship and the communal transmission of technical wisdom around physical sound media.",
+                "url": "https://waxlore.co",
+                "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "name": "Digital Archaeology & Material Culture Studies"
+                },
+                "sameAs": [
+                    "https://waxlore.co",
+                    "https://waxlore.co/collective/"
+                ]
+                },
     {
       "@type": "Person",
       "@id": "https://josiest.com/#person",
